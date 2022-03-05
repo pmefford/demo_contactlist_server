@@ -1,0 +1,13 @@
+<h1>Contact Details</h1>
+<div *ngIf="error == undefined" class="">
+  <div><label>Name:</label> {{contact?.name}}</div>
+  <div><label>Street: </label> {{contact?.street}}</div>
+  <div><label>City:</label> {{contact?.city}}</div>
+  <div><label>State:</label> {{contact?.state}}</div>
+  <div><label>Zip:</label> {{contact?.zip}}</div>
+  <div><label>Country:</label> {{contact?.country}}</div>
+  <div><label>Phone:</label> {{contact?.phone}}</div>
+</div>
+
+<button class="mt-10 btn btn-sm btn-outline-secondary" [routerLink]="['/contactsList']">Back</button>
+<button class="mt-10 btn btn-sm btn-outline-warning" (click)="deleteContact()">Delete</button>

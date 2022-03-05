@@ -1,0 +1,25 @@
+
+<div>
+<h1>Contact List
+  <button  [routerLink]="['/createContact']"  class="mr-20 mt-10 m-1 btn btn-sm btn-secondary ">Create Contact</button></h1>
+<hr/>
+<div *ngFor="let contact of contactPage.content" class="col--12">
+  <div class="well hoverwell thumbnail">
+    <h3>{{contact.name}}</h3>
+    <div>
+      <label>Phone:&nbsp;</label>
+      <span>{{contact.phone}}</span>
+    </div>
+
+    <div>
+      <span>{{contact.street}}</span><br />
+      <span>{{contact.city}}, {{contact.state}}, {{contact.zip}}</span><br />
+    </div>
+    <button  [routerLink]="['/contact', contact.id]"  class="mt-10 m-1 btn btn-sm btn-outline-secondary">View</button>
+    <button  [routerLink]="['/updateContact', contact.id]"  class="mt-10 m-1 btn btn-sm btn-outline-info">Update</button>
+    <button  (click)="deleteContact(contact.id)"  class="mt-10 m-1 btn btn-sm btn-outline-warning">Delete</button>
+  </div>
+</div>
+
+
+</div>
