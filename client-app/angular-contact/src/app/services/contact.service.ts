@@ -34,7 +34,7 @@ export class ContactService {
   }
   deleteContact(contactId: string):Observable<string> {
     let options = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
-    return this.http.delete<string>(this.baseUrl+'/contact/'+contactId)
+    return this.http.delete<string>(this.baseUrl+'/contact/'+contactId,options)
       .pipe(catchError(this.handleError<string>('deleteContact', '')))
   }
 

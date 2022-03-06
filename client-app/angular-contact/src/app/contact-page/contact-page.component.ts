@@ -24,6 +24,5 @@ export class ContactPageComponent implements OnInit {
   deleteContact(id: string) {
     this.contactService.deleteContact(id)
       .subscribe( )
-
   }
 }

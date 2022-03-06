@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import {ContactService} from "./services/contact.service";
-import {ContactDetailsComponent} from "./contact-component/contact-details.component";
+import {ContactDetailsComponent} from "./contact-details/contact-details.component";
 import {HttpClientModule} from "@angular/common/http";
 import {ContactCreateComponent} from "./contact-create/contact-create.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
